@@ -1,0 +1,36 @@
+.outerCircle {
+  border: 10px solid #E10075;
+  border-radius: 50%;
+  width: 151px;
+  height: 151px;
+}
+
+.innerCircle {
+  width:130px;
+  height:130px;
+  border-radius:250px;
+  font-size:35px;
+  color:#000;
+  line-height:130px;
+  text-align:center;
+  background:#fff
+}
+
+
+div.main {
+  justify-content: space-around;
+}
+
+div.main > p {
+  font-size: 50px;
+}
+
+#circleDiv {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+
+#circleDiv>div>h2 {
+  text-align: center
+}

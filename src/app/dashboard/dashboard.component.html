@@ -50,8 +50,7 @@
     <!-- #Top Bar -->
     <section>
       <!-- Left Sidebar -->
-      <aside id="leftsidebar" class="sidebar">
-        <!-- User Info -->
+      <!-- <aside id="leftsidebar" class="sidebar">
         <div class="user-info">
           <div class="image">
             <img src="../../assets/background-image.png" width="48" height="48" alt="User" />
@@ -74,8 +73,7 @@
             </div>
           </div>
         </div>
-        <!-- #User Info -->
-        <!-- Menu -->
+
         <br/> <br/>
         <div class="menu">
           <ul class="list">
@@ -417,19 +415,16 @@
             </li>
           </ul>
         </div>
-        <!-- #Menu -->
-        <!-- Footer -->
+
         <div class="legal">
           <div class="copyright">
             &copy; 2019 <a href="javascript:void(0);">ChartJS Dashboard</a>
           </div>
-          <!-- <div class="version">
-            <b>Version: </b> 1.0.5
-          </div> -->
+
         </div>
-        <!-- #Footer -->
-      </aside>
-      <!-- #END# Left Sidebar -->
+
+      </aside> -->
+
       <!-- Right Sidebar -->
       <aside id="rightsidebar" class="right-sidebar">
         <ul class="nav nav-tabs tab-nav-right" role="tablist">
@@ -500,12 +495,17 @@
                 target="_blank">github.com/chartjs/Chart.js</a></small> -->
           </p>
         </div>
+
+
+
+
+
         <div class="row clearfix">
           <!-- Line Chart -->
-          <div *ngFor="let chart of chartData; let i=index" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div *ngFor="let chart of chartData; let i=index" class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
             <div class="card" *ngIf=" i < iterations" >
               <div class="header">
-                <h2>{{chart.title}}</h2>
+                <p>{{chart.title}}</p>
               </div>
               <ng-container class="body" *ngIf="chart.chartType=='line'">
                   <canvas baseChart
@@ -522,6 +522,7 @@
                   <canvas baseChart
                   [datasets]="chart.datasets"
                   [labels]="chart.chartLabels"
+                  [options]="chart.chartOptions"
                   [chartType]="chart.chartType"
                   (chartHover)="chartHovered($event)"
                   (chartClick)="chartClicked($event)">
@@ -531,6 +532,7 @@
                 <ng-container class="body"  *ngIf="chart.chartType=='doughnut'">
                     <canvas baseChart
                     [data]="chart.data"
+                    [options]="chart.chartOptions"
                     [labels]="chart.chartLabels"
                     [chartType]="chart.chartType"
                     (chartHover)="chartHovered($event)"
@@ -542,6 +544,7 @@
                       <canvas baseChart
                       [datasets]="chart.data"
                       [labels]="chart.chartLabels"
+                      [options]="chart.chartOptions"
                       [chartType]="chart.chartType"
                       (chartHover)="chartHovered($event)"
                       (chartClick)="chartClicked($event)">
@@ -552,6 +555,7 @@
                         <canvas baseChart
                         [data]="chart.data"
                         [legend]="chart.chartLegend"
+                        [options]="chart.chartOptions"
                         [labels]="chart.chartLabels"
                         [chartType]="chart.chartType"
                         (chartHover)="chartHovered($event)"
@@ -563,6 +567,7 @@
                         <canvas baseChart
                         [data]="chart.data"
                         [labels]="chart.chartLabels"
+                        [options]="chart.chartOptions"
                         [chartType]="chart.chartType"
                         (chartHover)="chartHovered($event)"
                         (chartClick)="chartClicked($event)">

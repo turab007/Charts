@@ -3142,14 +3142,14 @@ a {
 }
 
 section.content {
-  padding: 100px 15px 0 315px;
+  padding: 100px 15px 0 20px;
   color: white;
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
   -webkit-transition: 0.5s;
   background-color: #756213;
   background-image: linear-gradient(315deg, #756213 0%, #000000 74%);
-
+  min-height: 100%;
   transition: 0.5s;
 }
 
@@ -3671,9 +3671,16 @@ section.content {
   padding: 5px 0 0 8px !important;
 }
 
+
+html,
+body {
+  height: 100%;
+  margin: 0px;
+}
+
 /* Card ======================================== */
 .card {
-  background: #fff;
+  background: transparent;
   min-height: 50px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   position: relative;
@@ -3820,7 +3827,7 @@ section.content {
 }
 
 .card .header {
-  color: #555;
+  font-size: 30px;
   padding: 20px;
   position: relative;
   border-bottom: 1px solid rgba(204, 204, 204, 0.35);

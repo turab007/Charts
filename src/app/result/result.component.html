@@ -1,0 +1,55 @@
+<div class="main">
+  <p>Dein Ergebnis</p>
+  <div id="circleDiv">
+    <div>
+      <h2>Zeit</h2>
+<div class="outerCircle">
+<div class="innerCircle">
+{{zeit | formatTime}}
+</div>
+</div>
+    </div>
+    <div>
+      <h2>Fehler</h2>
+      <div class="outerCircle">
+<div class="innerCircle">
+{{fehler}}
+</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div style="width: 50%; ">
+      <div class="header">
+        </div>
+        <ng-container class="body"  >
+
+                <!-- <canvas baseChart
+                [datasets]="chart1.datasets"
+                [labels]="chart1.chartLabels"
+                [options]="chart1.chartOptions"
+                [chartType]="chart1.chartType"
+                [legend]="chart1.chartLegend"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas> -->
+
+                <canvas baseChart
+        [datasets]="bubbleChart.chartData"
+        [options]="bubbleChart.chartOptions"
+        [colors]="bubbleChart.chartColors"
+        [legend]="bubbleChart.chartLegend"
+        [chartType]="bubbleChart.chartType">
+      </canvas>
+
+            <!-- <canvas baseChart
+        [datasets]="chart.scatterChartData"
+        [options]="chart.scatterChartOptions"
+        [labels]="chart.scatterChartLabels"
+        [chartType]="chart.scatterChartType">
+      </canvas> -->
+        </ng-container>
+  </div>
+
+</div>>

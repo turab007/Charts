@@ -1,0 +1,42 @@
+
+#timer{
+  position: absolute;
+  bottom: 50px;
+  right: 70px;
+  color: white;
+
+}
+
+#timer2 {
+  width:150px;
+  height:150px;
+  line-height:150px;
+  font-size: 30px;
+
+}
+
+#circleSmall {
+  width: 180px;
+  height: 180px;
+  border: 15px solid #E10075;
+
+}
+
+.circle2 {
+	border: 25px solid #E10075;
+	border-radius: 50%;
+	width: 351px;
+	height: 351px;
+}
+
+.circle
+    {
+    width:300px;
+    height:300px;
+    border-radius:250px;
+    font-size:50px;
+    color:#000;
+    line-height:300px;
+    text-align:center;
+    background:#fff
+    }

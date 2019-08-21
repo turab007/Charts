@@ -16,6 +16,14 @@ export class DashboardComponent implements OnInit {
 
   public iterations = 30;
 
+  private lineChartOptions: any = {
+    legend: {
+      labels: {
+        fontColor: '#ffffff'
+      }
+    }
+  };
+
   public makeDataObject() {
 
     this.chartData = [
@@ -66,6 +74,11 @@ export class DashboardComponent implements OnInit {
               },
             ],
           },
+          legend: {
+            labels: {
+              fontColor: 'white'
+            }
+          }
         },
         chartColors: [
           { // grey
@@ -101,6 +114,13 @@ export class DashboardComponent implements OnInit {
         chartLabels: ['2006', '2007', '2008', '2009', '2010', '2011', '2012'],
         chartType: 'bar',
         chartLegend: true,
+        chartOptions: {
+          legend: {
+            labels: {
+              fontColor: '#ffffff'
+            }
+          }
+        },
         datasets: [
           { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
           { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }
@@ -110,6 +130,13 @@ export class DashboardComponent implements OnInit {
       {
         title: 'DOUGHNUT CHART',
         chartLabels: ['Sales Q1', 'Sales Q2', 'Sales Q3', 'Sales Q4'],
+        chartOptions: {
+          legend: {
+            labels: {
+              fontColor: '#ffffff'
+            }
+          }
+        },
         data: [
           [350, 450, 100],
           [50, 150, 120],
@@ -121,6 +148,13 @@ export class DashboardComponent implements OnInit {
       {
         title: 'RADAR CHART',
         chartLabels: ['Q1', 'Q2', 'Q3', 'Q4'],
+        chartOptions: {
+          legend: {
+            labels: {
+              fontColor: '#ffffff'
+            }
+          }
+        },
         data: [
           { data: [120, 130, 180, 70], label: '2017' },
           { data: [90, 150, 200, 45], label: '2018' }
@@ -133,14 +167,26 @@ export class DashboardComponent implements OnInit {
         chartLabels: ['Download Sales', 'In-Store Sales', 'Mail Sales', 'Telesales', 'Corporate Sales'],
         data: [300, 400, 100, 40, 180],
         chartLegend: true,
-
+        chartOptions: {
+          legend: {
+            labels: {
+              fontColor: '#ffffff'
+            }
+          }
+        },
         chartType: 'polarArea'
       },
       {
         title: 'PIE CHART',
         chartLabels: ['Sales Q1', 'Sales Q2', 'Sales Q3', 'Sales Q4'],
         data: [120, 150, 180, 90],
-        chartType: 'pie'
+        chartType: 'pie',chartOptions: {
+          legend: {
+            labels: {
+              fontColor: '#ffffff'
+            }
+          }
+        },
       },
     ];
 
