@@ -16,21 +16,40 @@
   background:#fff
 }
 
+@media only screen and (min-width: 1500px) {
+  div.main {
+    justify-content: center;
+  }
 
-div.main {
-  justify-content: space-around;
+  .chartContainer {
+    width: 45%; position: relative; min-height: 300px; min-width: 230px;
+  }
+}
+@media only screen and (max-width: 1499px) {
+
+  div.main {
+    justify-content: space-around;
+  }
+  .chartContainer {
+    width:50%;
+  }
 }
 
-div.main > p {
+div#title {
   font-size: 50px;
+  flex: 0.2 1 auto;
+  display: flex;
+  align-items: center;
 }
 
 #circleDiv {
   display: flex;
   width: 80%;
   justify-content: space-between;
+  flex: 0.4 1 auto;
 }
 
 #circleDiv>div>h2 {
   text-align: center
 }
+

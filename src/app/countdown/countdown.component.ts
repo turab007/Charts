@@ -1,4 +1,4 @@
-import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable, timer } from 'rxjs';
 import { take, map } from 'rxjs/operators';
 import { Router } from '@angular/router';
